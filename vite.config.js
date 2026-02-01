@@ -2,10 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-// Relative base so assets load correctly on GitHub Pages (works for any subpath)
+// GitHub Pages serves at https://<user>.github.io/<repo-name>/
+const repoName = 'news-explorer'
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? './' : '/',
+  base: command === 'build' ? `/${repoName}/` : '/',
   server: {
     port: 5173,
     host: true,
