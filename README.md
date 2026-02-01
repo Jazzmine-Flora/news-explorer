@@ -4,7 +4,7 @@ A modern news search application built with React. This project is a **full-stac
 
 ## Live demo (deployed on GitHub Pages)
 
-**[Open News Explorer](https://jazzmine-flora.github.io/final-project-frontend)**
+**[Open News Explorer](https://jazzmine-flora.github.io/news-explorer)**
 
 The app is deployed at the link above. You can search news, sign in with a demo account (see below), and save articles. No installation required.
 
@@ -38,8 +38,8 @@ You can also sign up with your own email; data is stored locally for this portfo
 ## Run locally
 
 ```bash
-git clone https://github.com/Jazzmine-Flora/final-project-frontend.git
-cd final-project-frontend
+git clone https://github.com/Jazzmine-Flora/news-explorer.git
+cd news-explorer
 npm install
 npm run dev
 ```
@@ -54,16 +54,16 @@ Open the URL shown in the terminal (e.g. `http://localhost:5173`).
    ```
    This runs `npm run build` then pushes the `dist/` folder to the **gh-pages** branch.
 
-2. **Configure GitHub to serve from that branch (important):**
-   - Open your repo on GitHub: **Settings** > **Pages**
-   - Under **Build and deployment** > **Source**, choose **Deploy from a branch**
-   - **Branch:** select **gh-pages** (not main)
+2. **Configure GitHub to serve from that branch (required):**
+   - Open your repo on GitHub: **Settings** → **Pages**
+   - Under **Build and deployment** → **Source**, choose **Deploy from a branch**
+   - **Branch:** select **gh-pages** (not `main`)
    - **Folder:** select **/ (root)**
-   - Save
+   - Click **Save**
 
-   If Pages is set to the **main** branch, you will see a blank screen, because GitHub would be serving the source code instead of the built app. The built app lives on the **gh-pages** branch.
+   **If you see the README (or repo files) instead of the app**, GitHub Pages is still set to the **main** branch. The built website only lives on the **gh-pages** branch, so the source must be **gh-pages** for the site to work.
 
-3. Wait a minute, then open: `https://<your-username>.github.io/final-project-frontend/`
+3. Wait a minute, then open: `https://<your-username>.github.io/<repo-name>/`
 
 ## Scripts
 
