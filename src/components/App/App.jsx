@@ -180,11 +180,15 @@ function App() {
     );
   }
 
-  // Basename must match where the app is served: /final-project-frontend on GitHub Pages, / on preview or local
-  const basename =
-    typeof window !== "undefined" && window.location.pathname.startsWith("/final-project-frontend")
-      ? "/final-project-frontend"
-      : "/";
+  // Basename must match where the app is served. On GitHub Pages it's /repo-name; locally it's /
+  const getBasename = () => {
+    if (typeof window === "undefined") return "/";
+    const pathname = window.location.pathname.replace(/\/$/, "") || "/";
+    const segments = pathname.split("/").filter(Boolean);
+    const first = segments[0];
+    return first ? `/${first}` : "/";
+  };
+  const basename = getBasename();
 
   return (
     <Router basename={basename}>
